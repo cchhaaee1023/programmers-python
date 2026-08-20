@@ -18,6 +18,7 @@ def solution(a, b, c, d):
 
     if count_same == 4:
         return 1111*a
+    
     elif count_same == 2:
         if dice.count(dice[0]) == 3:
             p = dice[0]
@@ -27,13 +28,16 @@ def solution(a, b, c, d):
             q = dice[0]
         else:
             return (uniq[0] + uniq[1]) * abs(uniq[0] - uniq[1])
+        
         return (10 * p + q)**2
+    
     elif count_same == 1:
         for u in uniq:
             if dice.count(u) == 2:
                 uniq.remove(u)
                 # uniq.remove(u)
         return uniq[0] * uniq[1]
+    
     else:
         return min(dice)
         
