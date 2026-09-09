@@ -10,8 +10,8 @@ def solution(cacheSize, cities):
         
         if city in cache:
             answer += 1
-            cache.remove(city.lower())
-            cache.append(city.lower())
+            cache.remove(city)
+            cache.append(city)
         else:   # 캐시에 없음
             if len(cache) == cacheSize:     # 꽉찼을 때
                 cache.pop(0) # 가장 오래된 city 삭제
